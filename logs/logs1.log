@@ -1,0 +1,5 @@
+2026-10-09T14:22:31Z INFO  app=training-session event=startup status=ok
+2026-10-09T14:22:32Z DEBUG app=training-session event=connect target=db-primary latency_ms=14
+2026-10-09T14:22:33Z WARN  app=training-session event=cache_miss key=user:1847
+2026-10-09T14:22:34Z INFO  app=training-session event=job_complete id=7c2f result=success duration_ms=243
+2026-10-09T14:22:35Z INFO  app=training-session event=shutdown status=clean

@@ -1,0 +1,11 @@
+2026-10-09 09:12:04 INFO  [db-conn-1] Connected to database 'app_prod'
+2026-10-09 09:12:05 DEBUG [sql] SELECT id, name, email FROM users WHERE active = 1 ORDER BY created_at DESC;
+2026-10-09 09:12:05 INFO  [sql] Query completed in 14ms, rows=25
+2026-10-09 09:12:08 DEBUG [sql] INSERT INTO audit_log (user_id, action, created_at) VALUES (42, 'LOGIN', NOW());
+2026-10-09 09:12:08 INFO  [sql] Query completed in 7ms, rows=1
+2026-10-09 09:12:11 WARN  [sql] UPDATE orders SET status = 'SHIPPED' WHERE id = 1087;
+2026-10-09 09:12:11 INFO  [sql] Query completed in 19ms, rows=1
+2026-10-09 09:12:14 DEBUG [sql] SELECT p.id, p.title, c.name AS category FROM products p JOIN categories c ON c.id = p.category_id WHERE p.stock > 0;
+2026-10-09 09:12:14 INFO  [sql] Query completed in 23ms, rows=12
+2026-10-09 09:12:18 ERROR [sql] DELETE FROM sessions WHERE expires_at < NOW();
+2026-10-09 09:12:18 ERROR [sql] Deadlock detected while executing statement
